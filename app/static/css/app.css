@@ -55,7 +55,7 @@ input[type='text']{
     height: 38px;
 }
 input:valid, textarea:valid, select:valid{
-    box-shadow: 0 0 2px rgba(80, 174, 160,0.3);;
+    box-shadow: 0 0 2px rgba(80, 174, 160,0.3);
     background-color:rgba(80, 174, 160,0.1);
 }
 select{
@@ -147,13 +147,31 @@ textarea{
     display: grid;
     grid-template-rows: auto 2rem;
 }
-/*
-.photo{
-    width: 375px;
-    height: 425px;
-} */
 
-@media (max-width: 768px) {
+@media only screen and (max-width: 768px) {
+    .properties{
+        display: flex;
+        flex-direction:column;
+        gap: 10px;
+    }
+
+    .jumbotron h1{
+        font-size:xx-large;
+    }
+    .view-property{
+        display: flex;
+        flex-direction: column;
+    }
+    #view-property-img{
+        width: 100%;
+    }
+    .realtor-container{
+        text-align: center;
+    }
+}
+
+
+@media only screen and (min-width: 768px) {
     #new-property-form{
         padding: 1.5rem 1.5rem 1.5rem 1.5rem;
     }
@@ -168,6 +186,9 @@ textarea{
 
     .navbar{
         height:auto;
+    }
+    .realtor-container{
+        text-align: left;
     }
 }
 
@@ -190,12 +211,18 @@ footer p{
     font-size:larger;
 }
 
-/* .danger{
-    color:var(--red);
-    margin-left: 280px;
+.danger{
+    font-size: small;
+    color:#dc3545;
 }
-
 .success{
-    color:var(--green);
-    margin-left: 287px;
-} */
+    font-size: small;
+    color:#5cb85c;
+}
+.flash-msgs{
+    padding-top:15px;
+    margin-bottom:1rem;
+    border:1px solid rgba(80, 174, 160,0.5);
+    border-radius:5px;
+    text-align:center;
+}

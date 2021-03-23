@@ -7,7 +7,7 @@ class Property(db.Model):
     __tablename__ = 'properties'
     id = db.Column(db.Integer, primary_key=True)
     title = db.Column('Title',db.String(80))
-    description = db.Column('Description',db.String(255))
+    description = db.Column('Description',db.String(800))
     rooms = db.Column('No. of Rooms',db.String(3)) # (String type) No operations will be performed
     bathrooms = db.Column('No. of Bathrooms',db.String(3)) # (String type) No operations will be performed
     price = db.Column('Price',db.String(12)) # (String type) No operations will be performed

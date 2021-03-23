@@ -28,7 +28,8 @@ def home():
 @app.route('/about/')
 def about():
     """Render the website's about page."""
-    return render_template('about.html', name="properties available for rent/sale.")
+    note = 'We have properties available for rent/sale'
+    return render_template('about.html', name=note)
 
 @app.route('/property', methods=['GET', 'POST'])
 def property():
@@ -55,7 +56,7 @@ def property():
             db.session.add(newProperty)
             db.session.commit()
 
-            flash('Property was successfully added', 'success')
+            flash(f'Your {propertyType} was added successfully!', 'success')
             return redirect(url_for('properties'))
         flash_errors(form)
     return render_template('property_form.html', form=form)
