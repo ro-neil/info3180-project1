@@ -34,7 +34,6 @@ def about():
 def property():
     """Render the website's property page."""
     # Instantiate your form class
-    flash('Property was successfully added', 'success')
     form = NewPropertyForm()
     # Validate file upload on submit
     
