@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+
+{% block main %}
+<div class="property">
+    <div class="row row-cols-1 row-cols-md-3 g-4">
+        <div class="col">
+            <div class="card h-100 view-property">
+                <img src="{{ url_for('getImage', filename=_property.photo_name) }}" id='view-property-img' alt="{{ _property.photo_name }}">
+                <div class="card-body vp-body">
+                    <div class="property-info">
+                        <h4 class="card-title pb-1 pl-1">{{ _property.title }}</h4>
+                        <div class="price-type pb-3">
+                            <span class="badge badge-pill bg-warning px-3 py-2 text-light md-bold"
+                            data-toggle="tooltip" data-placement="top" title="Price">${{ _property.price }}</span>
+                            <span class="badge badge-pill bg-info px-3 py-2 text-light  md-bold"
+                            data-toggle="tooltip" data-placement="top" title="Property Type">{{ _property.property_type}}</span>
+                        </div>
+                        <div class="description pb-3 md-bold pl-1">{{ _property.description }}</div>
+                        <div class="rooms-container">
+                            <p class="card-text p-rooms md-bold">
+                                <img src='../static/icons/bed.svg' alt='bed icon' id='bed-icon' class='mr-2 icon'/>{{ _property.rooms }} Bedrooms
+                            </p>
+                            <p class="card-text p-bathrooms md-bold">
+                                <img src='../static/icons/shower.svg' alt='shower icon' id='shower-icon' class='mr-2 icon' />{{ _property.bathrooms }} Bathrooms
+                            </p>
+                        </div>
+                        <p class="card-text p-location md-bold pb-3">
+                            <img src='../static/icons/location.svg' alt='location icon' id='location-icon-single' class='mr-2 icon' />{{ _property.location }}
+                        </p>
+                    </div>
+                    <div class=''>
+                        <a href="mailto:realtor@realestate.com" class="btn btn-info" id='email-realtor'>Email Realtor</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}
+

@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+
+{% block css %}
+<link rel="stylesheet" href="{{url_for('static', filename='css/styles.css')}}">
+{% endblock %}
+
+{% block main %}
+<div class="jumbotron">
+  <div class="container">
+    <h1 class='text-center'>Welcome to your #1 Real Estate Website!</h1>
+    <p class='text-center'>We have the right property for you.</p>
+  </div>
+</div>
+{% endblock %}
+
+{% block js %}
+<script src="{{ url_for('static', filename='js/app.min.js') }}" charset="utf-8"></script>
+{% endblock %}

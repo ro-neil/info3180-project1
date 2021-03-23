@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+
+{% block main %}
+<h1 class="properties-header font-weight-bold mb-4">Properties</h1>
+
+<div class="properties">
+    {% for _property in properties %}
+        <div class="row row-cols-1 row-cols-md-3 g-4">
+            <div class="col">
+                <div class="card h-100">
+                    <img src="{{ url_for('getImage', filename=_property.photo_name) }}" class="card-img-top" alt="{{ _property.photo_name }}">
+                    <div class="card-body">
+                        <h5 class="card-title px-1 ml-1">{{ _property.title }}</h5>
+                        <p class="card-text text-muted md-bold">
+                            <img src='../static/icons/location.svg' alt='location icon' id='location-icon-all' class='icon' />{{ _property.location }}</p>
+                        <div class="badge badge-pill bg-warning px-4 py-2 text-light md-bold ml-1">${{ _property.price }}</div>
+                    </div>
+                    <div class="card-footer text-center bg-info">
+                        <a href="{{ url_for('propertyid', pid=_property.id) }}" class="btn btn-info font-weight-bold">View Property</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    {% endfor %}
+</div>
+{% endblock %}
+

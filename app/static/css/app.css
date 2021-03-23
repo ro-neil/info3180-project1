@@ -1,0 +1,201 @@
+body {
+    padding-top: 50px;
+    background-color: #e6e6e6;
+    font-family: 'Montserrat', sans-serif;
+}
+nav{
+    background-color: #39393a; 
+    height: 4.5rem;
+}
+nav > span{
+    background-color:#297373;
+    color:#39393a;
+    padding: 0 1rem 0 1rem;
+}
+
+#navbarNav{
+    font-weight: 500;
+}
+
+#navbarNav a{
+    color:#e6e6e6;
+}
+
+header{
+    margin-bottom: 45px;
+    box-shadow:0 0 15px 4px rgba(255,255,255,0.8);
+}
+.site-name-container:hover{
+    box-shadow:0 0 15px 4px rgba(255,255,255,0.5);
+}
+
+label{
+    font-weight: bold;
+}
+
+input[type='text'], select, textarea{
+    color:#39393a;
+    font-weight: 500;
+    border-radius: 5px;
+    padding:10px;
+    border:1px solid rgba(57, 57, 58, 0.1);
+    box-shadow:0 0 15px 4px rgba(0,0,0,0.03);
+    border-radius: 4px;
+}
+
+input[type='file'] {
+    font-weight: 500;
+}
+input:focus, select:focus, textarea:focus{
+    outline-style:solid;
+    outline-width: 5px;
+    outline-color: rgba(255, 133, 82, 0.1);
+}
+input[type='text']{
+    height: 38px;
+}
+input:valid, textarea:valid, select:valid{
+    box-shadow: 0 0 2px rgba(80, 174, 160,0.3);;
+    background-color:rgba(80, 174, 160,0.1);
+}
+select{
+    background-color:white;
+}
+.badge-pill:hover{
+    font-size: 1.06rem;
+}
+textarea{
+    resize: vertical;
+    height:75px;
+}
+
+.form-group textarea, .form-group select{
+    border:1px solid rgba(57, 57, 58, 0.1);
+}
+#submit-button{
+    margin-top: 30px;
+    background-color:#297373;
+    color:#e6e6e6;
+    font-weight: 500;
+}
+
+#submit-button:hover{
+    background-color:#39393a;
+}
+
+#new-property-form{
+    padding: 1.5rem 8rem 1.5rem 1.5rem;
+    margin-bottom:1rem;
+    background-color:#fff;
+    border-radius: 5px;
+}
+
+.form-row .sm-padding-right{
+    padding-right: 25px;
+}
+
+.properties{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+}
+
+.card img{
+    height: 280px;
+    max-height: 100%;
+}
+
+.sm-bold{
+    font-size: small;
+    font-weight: 600;
+}
+
+.md-bold{
+    font-size:medium;
+    font-weight: 600;
+}
+#email-realtor{
+    font-weight: 600;
+}
+.card .icon{
+    width: 1.75rem;
+    height: 1.5rem;
+    padding-bottom: .125rem;
+}
+
+.view-property{
+    display: flex;
+    flex-direction: row;
+}
+.rooms-container{
+    display: flex;
+    flex-direction:row;
+    gap: 2rem;
+}
+
+.price-type{
+    display: flex;
+    flex-direction:row;
+    gap: 1rem;
+}
+
+#view-property-img{
+    height: 25rem;
+}
+
+.vp-body{
+    display: grid;
+    grid-template-rows: auto 2rem;
+}
+/*
+.photo{
+    width: 375px;
+    height: 425px;
+} */
+
+@media (max-width: 768px) {
+    #new-property-form{
+        padding: 1.5rem 1.5rem 1.5rem 1.5rem;
+    }
+
+    .form-row .sm-padding-right{
+        padding-right: 0px;
+    }
+
+    .new-property-header{
+        font-size:x-large;
+    }
+
+    .navbar{
+        height:auto;
+    }
+}
+
+footer{
+    display: flex;
+    text-align: center;
+    padding-top:2rem;
+}
+
+footer p{
+    background-color: #39393a; 
+    height: 5rem;
+    color: #e6e6e6;
+    padding-top:1.65rem;
+}
+
+.danger, .success{
+    list-style: none;
+    font-weight:bold;
+    font-size:larger;
+}
+
+/* .danger{
+    color:var(--red);
+    margin-left: 280px;
+}
+
+.success{
+    color:var(--green);
+    margin-left: 287px;
+} */
